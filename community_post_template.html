@@ -17,8 +17,8 @@
     --page-h: 680px;
     --hl-size: 48px;
     --p2hl-size: 60px;
-    --body-size: 10px;
-    --quote-size: 17px;
+    --body-size: 14px;
+    --quote-size: 14px;
   }
 
   body { font-family: 'Source Serif 4', serif; background: #d4d0c8; min-height: 100vh; display: flex; }
@@ -103,11 +103,11 @@
 
   /* Location tag — town color bg, arrows point inward */
   .p1-location-tag { text-align: center; padding: 7px 16px 5px; background: var(--footer); margin: 8px 0 0; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Bebas Neue', sans-serif; }
-  .p1-location-tag .arrow { display:flex; align-items:center; gap:4px; }
-  .p1-location-tag .arrow::before { content:''; width:40px; height:1px; background:#fffefa; opacity:0.5; }
-  .p1-location-tag .arrow-r::after { content:''; width:40px; height:1px; background:#fffefa; opacity:0.5; }
+  .p1-location-tag .arrow { display:flex; align-items:center; gap:4px; color:#fffefa; }
+  .p1-location-tag .arrow::before { content:''; width:40px; height:1px; background:#fffefa; opacity:0.6; }
+  .p1-location-tag .arrow-r::after { content:''; width:40px; height:1px; background:#fffefa; opacity:0.6; }
   .p1-location-town { font-size: 22px; letter-spacing: 3px; line-height: 1; color: #fffefa; }
-  .p1-location-sub  { font-size: 13px; letter-spacing: 2px; color: #fffefa; opacity: 0.85; }
+  .p1-location-sub  { font-size: 13px; letter-spacing: 2px; color: #fffefa; }
 
   .p1-body { padding: 8px 16px 6px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; flex: 1; }
   .p1-body p { font-size: var(--body-size); line-height: 1.55; font-style: italic; color: var(--ink); }
@@ -174,13 +174,13 @@
     </div>
     <div class="slider-row">
       <label>Body Text</label>
-      <input type="range" id="sz-body" min="8" max="14" value="10" step=".5" oninput="updateSizes()">
-      <span class="slider-val" id="sz-body-val">10px</span>
+      <input type="range" id="sz-body" min="8" max="14" value="14" step=".5" oninput="updateSizes()">
+      <span class="slider-val" id="sz-body-val">14px</span>
     </div>
     <div class="slider-row">
       <label>Quote Text</label>
-      <input type="range" id="sz-quote" min="10" max="26" value="17" step=".5" oninput="updateSizes()">
-      <span class="slider-val" id="sz-quote-val">17px</span>
+      <input type="range" id="sz-quote" min="10" max="26" value="14" step=".5" oninput="updateSizes()">
+      <span class="slider-val" id="sz-quote-val">14px</span>
     </div>
   </div>
 
@@ -474,7 +474,7 @@
       if (ph) ph.style.display='';
     });
     document.getElementById('c-footer').value = '#1a1a1a';
-    [['sz-hl',48],['sz-p2hl',60],['sz-body',10],['sz-quote',17]].forEach(([id,v]) => {
+    [['sz-hl',48],['sz-p2hl',60],['sz-body',14],['sz-quote',14]].forEach(([id,v]) => {
       document.getElementById(id).value = v;
     });
     updateColors(); updateSizes();
