@@ -15,7 +15,7 @@
     --light-gray: #e8e6e0;
     --page-w: 540px;
     --page-h: 680px;
-    --hl-size: 56px;
+    --hl-size: 48px;
     --p2hl-size: 60px;
     --body-size: 10px;
     --quote-size: 17px;
@@ -29,12 +29,12 @@
     padding: 20px 18px 40px; overflow-y: auto; height: 100vh; position: sticky; top: 0;
   }
   #editor h2 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 2px; color: #fff; margin-bottom: 2px; }
-  #editor p.sub { font-size: 10px; color: #666; font-family: sans-serif; margin-bottom: 16px; }
+  #editor p.sub { font-size: 11px; color: #999; font-family: sans-serif; margin-bottom: 16px; }
 
   .field-group { border-top: 1px solid #383838; padding-top: 14px; margin-top: 14px; }
-  .field-group h3 { font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 2px; color: #888; margin-bottom: 10px; }
+  .field-group h3 { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 2px; color: #fff; margin-bottom: 10px; }
   .field { margin-bottom: 10px; }
-  .field label { display: block; font-size: 9px; font-family: sans-serif; letter-spacing: 1px; text-transform: uppercase; color: #666; margin-bottom: 3px; }
+  .field label { display: block; font-size: 11px; font-family: sans-serif; letter-spacing: 1px; text-transform: uppercase; color: #bbb; margin-bottom: 3px; }
   .field input[type=text], .field textarea, .field select {
     width: 100%; background: #333; border: 1px solid #484848; color: #eee;
     padding: 6px 9px; font-family: 'Source Serif 4', serif; font-size: 12px;
@@ -45,16 +45,16 @@
 
   /* SINGLE COLOR PICKER */
   .color-single { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-  .color-single label { font-size: 9px; font-family: sans-serif; letter-spacing: 1px; text-transform: uppercase; color: #666; min-width: 80px; }
+  .color-single label { font-size: 11px; font-family: sans-serif; letter-spacing: 1px; text-transform: uppercase; color: #bbb; min-width: 80px; }
   .color-single input[type=color] { width: 48px; height: 32px; border: 1px solid #484848; border-radius: 3px; cursor: pointer; background: none; padding: 2px; }
-  .color-single .hex-val { font-size: 10px; color: #888; font-family: monospace; }
-  .color-note { font-size: 9px; font-family: sans-serif; color: #555; line-height: 1.5; margin-top: 6px; }
+  .color-single .hex-val { font-size: 11px; color: #bbb; font-family: monospace; }
+  .color-note { font-size: 10px; font-family: sans-serif; color: #999; line-height: 1.5; margin-top: 6px; }
 
   /* FONT SIZES */
   .slider-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-  .slider-row label { font-size: 9px; font-family: sans-serif; color: #666; min-width: 92px; text-transform: uppercase; letter-spacing: 1px; }
+  .slider-row label { font-size: 11px; font-family: sans-serif; color: #bbb; min-width: 92px; text-transform: uppercase; letter-spacing: 1px; }
   .slider-row input[type=range] { flex: 1; accent-color: #888; }
-  .slider-val { font-size: 10px; color: #aaa; font-family: sans-serif; min-width: 30px; text-align: right; }
+  .slider-val { font-size: 11px; color: #bbb; font-family: sans-serif; min-width: 30px; text-align: right; }
 
   /* IMAGE UPLOAD */
   .img-upload-label { display: block; background: #333; border: 1px dashed #555; padding: 8px; text-align: center; font-size: 10px; font-family: sans-serif; color: #777; cursor: pointer; border-radius: 3px; margin-top: 3px; }
@@ -164,8 +164,8 @@
     <h3>🔤 Font Sizes</h3>
     <div class="slider-row">
       <label>P1 Headline</label>
-      <input type="range" id="sz-hl" min="28" max="80" value="56" oninput="updateSizes()">
-      <span class="slider-val" id="sz-hl-val">56px</span>
+      <input type="range" id="sz-hl" min="28" max="80" value="48" oninput="updateSizes()">
+      <span class="slider-val" id="sz-hl-val">48px</span>
     </div>
     <div class="slider-row">
       <label>P2 Headline</label>
@@ -266,7 +266,7 @@
   <!-- PNG EXPORT -->
   <div class="field-group">
     <h3>📸 Export for Instagram</h3>
-    <div style="font-size:9px;font-family:sans-serif;color:#666;line-height:1.5;margin-bottom:10px;">
+    <div style="font-size:10px;font-family:sans-serif;color:#999;line-height:1.5;margin-bottom:10px;">
       Downloads 1080×1350 px PNG (4:5 IG portrait ratio) — ready to upload directly. Export both pages as your carousel slides.
     </div>
     <button class="btn btn-png" onclick="exportPNG('page1','slide1_cover')">⬇ DOWNLOAD PAGE 1 PNG</button>
@@ -275,7 +275,7 @@
   </div>
 
   <!-- GBP NOTE -->
-  <div style="margin-top:14px;font-size:9px;font-family:sans-serif;color:#555;line-height:1.6;border-top:1px solid #383838;padding-top:12px;">
+  <div style="margin-top:14px;font-size:10px;font-family:sans-serif;color:#999;line-height:1.6;border-top:1px solid #383838;padding-top:12px;">
     📌 <strong style="color:#888;">GBP Post:</strong> Use Page 1 PNG only. GBP displays square — crop to 1:1 after download, or zoom/crop on upload. Caption via the GBP short version (150 words max).
   </div>
 </div>
@@ -474,7 +474,7 @@
       if (ph) ph.style.display='';
     });
     document.getElementById('c-footer').value = '#1a1a1a';
-    [['sz-hl',56],['sz-p2hl',60],['sz-body',10],['sz-quote',17]].forEach(([id,v]) => {
+    [['sz-hl',48],['sz-p2hl',60],['sz-body',10],['sz-quote',17]].forEach(([id,v]) => {
       document.getElementById(id).value = v;
     });
     updateColors(); updateSizes();
