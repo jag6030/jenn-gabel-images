@@ -97,14 +97,14 @@
   .p1-breaking::before, .p1-breaking::after { content:''; flex:1; height:1px; background: var(--ink); }
   .p1-title { font-family: 'UnifrakturMaguntia', cursive; font-size: 34px; color: var(--ink); line-height: 1; }
   .p1-headline { padding: 8px 16px 4px; text-align: center; font-family: 'Bebas Neue', sans-serif; font-size: var(--hl-size); line-height: .95; color: var(--ink); letter-spacing: .5px; }
-  .p1-image { margin: 0 16px; height: 200px; background: var(--light-gray); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .p1-image { margin: 0 16px; height: 254px; background: var(--light-gray); overflow: hidden; display: flex; align-items: center; justify-content: center; }
   .p1-image img { width:100%; height:100%; object-fit:cover; }
   .p1-image .img-placeholder { font-family: sans-serif; font-size: 11px; color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
 
   /* Location tag — town color bg, arrows point inward */
   .p1-location-tag { text-align: center; padding: 7px 16px 5px; background: var(--footer); margin: 8px 0 0; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Bebas Neue', sans-serif; }
   .p1-location-tag .arrow { display:flex; align-items:center; gap:4px; color:#fffefa; }
-  .p1-location-tag .arrow::before { content:''; width:40px; height:1px; background:#fffefa; opacity:0.6; }
+  .p1-location-tag .arrow:not(.arrow-r)::before { content:''; width:40px; height:1px; background:#fffefa; opacity:0.6; }
   .p1-location-tag .arrow-r::after { content:''; width:40px; height:1px; background:#fffefa; opacity:0.6; }
   .p1-location-town { font-size: 22px; letter-spacing: 3px; line-height: 1; color: #fffefa; }
   .p1-location-sub  { font-size: 13px; letter-spacing: 2px; color: #fffefa; }
@@ -201,7 +201,7 @@
     <div class="field"><label>Body Left</label><textarea id="f-body1" oninput="update()">[Body copy left column — 2 to 3 sentences about the story.]</textarea></div>
     <div class="field"><label>Body Right</label><textarea id="f-body2" oninput="update()">[Body copy right column — continuation of story or additional detail.]</textarea></div>
     <div class="field">
-      <label>Page 1 Image</label>
+      <label>Page 1 Image <span style="color:#888;font-weight:normal;letter-spacing:0;text-transform:none;">— crop 2:1 (e.g. 1938 × 969)</span></label>
       <label class="img-upload-label" for="img1-upload">Click to upload photo</label>
       <input class="img-upload-input" type="file" id="img1-upload" accept="image/*" onchange="loadImg(this,'p1img')">
     </div>
@@ -218,17 +218,17 @@
     <div class="field"><label>CTA Line 1</label><input type="text" id="f-cta1" value="Thinking About Moving?" oninput="update()"></div>
     <div class="field"><label>CTA Line 2</label><input type="text" id="f-cta2" value="call Jenn" oninput="update()"></div>
     <div class="field">
-      <label>Large Left Image</label>
+      <label>Photo A — Large Left <span style="color:#888;font-weight:normal;letter-spacing:0;text-transform:none;">— crop 1:1 square</span></label>
       <label class="img-upload-label" for="img2-upload">Click to upload photo</label>
       <input class="img-upload-input" type="file" id="img2-upload" accept="image/*" onchange="loadImg(this,'p2img-a')">
     </div>
     <div class="field">
-      <label>Top Right Image</label>
+      <label>Photo B — Top Right <span style="color:#888;font-weight:normal;letter-spacing:0;text-transform:none;">— crop 2:1</span></label>
       <label class="img-upload-label" for="img3-upload">Click to upload photo</label>
       <input class="img-upload-input" type="file" id="img3-upload" accept="image/*" onchange="loadImg(this,'p2img-b')">
     </div>
     <div class="field">
-      <label>Bottom Right Image</label>
+      <label>Photo C — Bottom Right <span style="color:#888;font-weight:normal;letter-spacing:0;text-transform:none;">— crop 2:1</span></label>
       <label class="img-upload-label" for="img4-upload">Click to upload photo</label>
       <input class="img-upload-input" type="file" id="img4-upload" accept="image/*" onchange="loadImg(this,'p2img-c')">
     </div>
